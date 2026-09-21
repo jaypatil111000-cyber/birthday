@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Hitakshi 🎂</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    overflow:hidden;
+    background:#000;
+}
+
+/* ================= SLIDES ================= */
+
+.slide{
+    width:100%;
+    height:100vh;
+    position:absolute;
+    top:0;
+    left:0;
+
+    display:none;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    text-align:center;
+    padding:20px;
+
+    color:white;
+}
+
+.slide.active{
+    display:flex;
+    animation:fade 1s ease;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:scale(1.05);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+
+/* ================= SLIDE 1 ================= */
+
+.slide1{
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+}
+
+.slide1 h1{
+    font-size:55px;
+    animation:heartbeat 1.5s infinite;
+}
+
+.slide1 p{
+    font-size:25px;
+    margin-top:20px;
+}
+
+@keyframes heartbeat{
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.08);
+    }
+}
+
+
+/* ================= SLIDE 2 ================= */
+
+.slide2{
+    background:linear-gradient(135deg,#667eea,#764ba2);
+}
+
+.slide2 h1{
+    margin-bottom:25px;
+}
+
+.photo{
+    width:280px;
+    height:280px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    border:5px solid white;
+
+    box-shadow:0 0 30px rgba(255,255,255,.6);
+
+    animation:photoZoom 3s infinite alternate;
+}
+
+@keyframes photoZoom{
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.04);
+    }
+}
+
+
+/* ================= SLIDE 3 ================= */
+
+.slide3{
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+}
+
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+
+    max-width:800px;
+}
+
+.gallery img{
+    width:180px;
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    border:4px solid white;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+
+    transition:.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.1) rotate(2deg);
+}
+
+
+/* ================= SLIDE 4 ================= */
+
+.slide4{
+    background:linear-gradient(135deg,#141e30,#243b55);
+}
+
+.cake{
+    font-size:130px;
+    animation:cakeBounce 1s infinite alternate;
+}
+
+@keyframes cakeBounce{
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-15px);
+    }
+}
+
+.slide4 h1{
+    font-size:40px;
+    margin:15px;
+}
+
+.candles{
+    font-size:45px;
+    margin:20px;
+}
+
+.candle{
+    cursor:pointer;
+    transition:.3s;
+}
+
+.candle:hover{
+    transform:scale(1.2);
+}
+
+
+/* ================= SLIDE 5 ================= */
+
+.slide5{
+    background:linear-gradient(135deg,#ee0979,#ff6a00);
+}
+
+.message{
+    max-width:700px;
+
+    font-size:22px;
+    line-height:1.8;
+
+    background:rgba(255,255,255,.15);
+
+    padding:30px;
+
+    border-radius:20px;
+
+    backdrop-filter:blur(5px);
+}
+
+
+/* ================= SLIDE 6 ================= */
+
+.slide6{
+    background:linear-gradient(135deg,#8e2de2,#4a00e0);
+}
+
+.slide6 h1{
+    font-size:45px;
+}
+
+.bigHeart{
+    font-size:120px;
+    animation:heartbeat 1s infinite;
+}
+
+
+/* ================= SLIDE 7 ================= */
+
+.slide7{
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+}
+
+.slide7 h1{
+    font-size:50px;
+}
+
+.slide7 p{
+    font-size:25px;
+    margin:20px;
+}
+
+
+/* ================= SLIDE 8 ================= */
+
+.slide8{
+    background:linear-gradient(135deg,#f857a6,#ff5858);
+}
+
+.gift{
+    font-size:150px;
+
+    cursor:pointer;
+
+    animation:giftBounce 1s infinite alternate;
+}
+
+@keyframes giftBounce{
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-20px);
+    }
+}
+
+.surprise{
+    display:none;
+
+    font-size:25px;
+
+    max-width:650px;
+
+    line-height:1.7;
+
+    margin-top:20px;
+}
+
+
+/* ================= SLIDE 9 ================= */
+
+.slide9{
+    background:linear-gradient(135deg,#fc466b,#3f5efb);
+}
+
+.slide9 h1{
+    font-size:55px;
+}
+
+.slide9 p{
+    font-size:25px;
+    margin-top:20px;
+}
+
+
+/* ================= SLIDE 10 ================= */
+
+.slide10{
+    background:linear-gradient(135deg,#ff0844,#ffb199);
+}
+
+.final{
+    font-size:60px;
+
+    animation:heartbeat 1s infinite;
+}
+
+.finalMessage{
+    font-size:25px;
+    margin-top:20px;
+}
+
+
+/* ================= BUTTON ================= */
+
+button{
+    position:absolute;
+
+    bottom:30px;
+
+    padding:13px 28px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:white;
+
+    color:#ff4081;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+
+/* ================= BALLOONS ================= */
+
+.balloon{
+    position:absolute;
+
+    font-size:50px;
+
+    animation:float 4s infinite ease-in-out;
+}
+
+.b1{
+    left:5%;
+    top:15%;
+}
+
+.b2{
+    right:5%;
+    top:20%;
+}
+
+.b3{
+    left:15%;
+    bottom:10%;
+}
+
+.b4{
+    right:15%;
+    bottom:15%;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-35px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+
+/* ================= FALLING HEARTS ================= */
+
+.heart{
+    position:fixed;
+
+    top:-20px;
+
+    font-size:20px;
+
+    animation:fall linear forwards;
+
+    pointer-events:none;
+}
+
+@keyframes fall{
+
+    to{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+    .slide1 h1{
+        font-size:38px;
+    }
+
+    .slide1 p{
+        font-size:18px;
+    }
+
+    .photo{
+        width:230px;
+        height:230px;
+    }
+
+    .gallery img{
+        width:130px;
+        height:130px;
+    }
+
+    .cake{
+        font-size:100px;
+    }
+
+    .slide4 h1{
+        font-size:30px;
+    }
+
+    .message{
+        font-size:17px;
+        padding:20px;
+    }
+
+    .slide6 h1,
+    .slide7 h1,
+    .slide9 h1{
+        font-size:35px;
+    }
+
+    .final{
+        font-size:40px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================================================= -->
+<!-- SLIDE 1 -->
+<!-- ================================================= -->
+
+<div class="slide slide1 active">
+
+    <div class="balloon b1">🎈</div>
+    <div class="balloon b2">🎈</div>
+    <div class="balloon b3">🎈</div>
+    <div class="balloon b4">🎈</div>
+
+    <h1>🎉 Happy Birthday Hita 🎉</h1>
+
+    <p>
+        Today is a very special day... ❤️
+    </p>
+
+    <button onclick="nextSlide()">
+        Start the Surprise 🎁
+    </button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- SLIDE 2 -->
+<!-- ================================================= -->
+
+<div class="slide slide2">
+
+    <h1>💗 Us 💗</h1>
+
+    <img src="photo1.jpg" class="photo">
+
+    <p style="margin-top:20px;font-size:20px;">
+        ❤️ ❤️ ❤️
+    </p>
+
+    <button onclick="nextSlide()">
+        Next ➡️
+    </button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- SLIDE 3 -->
+<!-- ================================================= -->
+
+<div class="slide slide3">
+
+    <h1>💖 My Cutiepie 💖</h1>
+
+    <div class="gallery">
+
+        <img src="photo2.jpg">
+
+        <img src="photo3.jpg">
+
+        <img src="photo4.jpg">
+
+        <img src="photo5.jpg">
+
+        <img src="photo6.jpg">
+
+    </div>
+
+    <button onclick="nextSlide()">
+        Continue ➡️
+    </button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- SLIDE 4 -->
+<!-- ================================================= -->
+
+<div class="slide slide4">
+
+    <div class="cake">
+        🎂
+    </div>
+
+    <h1>
+        Make A Wish! ✨
+    </h1>
+
+    <p>
+        Click each candle to blow it out 🕯️
+    </p>
+
+    <div class="candles">
+
+        <span class="candle" onclick="blow(this)">🕯️</span>
+
+        <span class="candle" onclick="blow(this)">🕯️</span>
+
+        <span class="candle" onclick="blow(this)">🕯️</span>
+
+        <span class="candle" onclick="blow(this)">🕯️</span>
+
+        <span class="candle" onclick="blow(this)">🕯️</span>
+
+    </div>
+
+    <button onclick="nextSlide()">
+        Wish Made? ✨
+    </button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- SLIDE 5 -->
+<!-- ================================================= -->
+
+<div class="slide slide5">
+
+    <h1>💌 A Message For You</h1>
+
+    <div class="message">
+
+       ❤️ Happy Birthday mera bachha, you are the best person I have ever met! ❤️
+
+        <br><br>
+
+        I'm really lucky to have you in my life. A person like you is a blessing for me. 
+        Thank you for always being there for me! You are so supportive, caring, understanding, cute,
+        beautiful, lovely, gorgeous, adorable, awesome, pookie, kuchupuchu...! Every moment with you feels 
+        like a dream come true. I loved our 6 years of togetherness and I am sure it will continue till 
+        the end.
+
+        <br><br>
+
+        I hope this birthday brings you lots of happiness
+        and gives you countless reasons to smile. ✨
+
+    </div>
+
+    <button onclick="nextSlide()">
+        Keep Going 💖
+    </button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- SLIDE 6 -->
+<!-- ================================================= -->
+
+<div class="slide slide6">
+
+    <div class="bigHeart">
+        ❤️
+    </div>
+
+    <h1>
+        Best Partner! 🫶
+    </h1>
+
+    <p style="font-size:22px;margin-top:20px;">
+        You are very special to me...💖
+    </p>
+
+    <button onclick="nextSlide()">
+        Next ➡️
+    </button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- SLIDE 7 -->
+<!-- ================================================= -->
+
+<div class="slide slide7">
+
+    <h1>
+        🌟 My Wish For You
+    </h1>
+
+    <p>
+        May your smile never fade.
+    </p>
+
+    <p>
+        May your dreams come true.
+    </p>
+
+    <p>
+        May you always stay happy. 
+    </p>
+
+     <p>
+        May your love towards me increases day by day. ❤️
+    </p>
+
+     <p>
+        May God gives you brain.
+    </p>
+
+    <p>
+        And may this year be your BEST year yet! 🎉
+    </p>
+
+    <button onclick="nextSlide()">
+        One More Surprise 🎁
+    </button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- SLIDE 8 -->
+<!-- ================================================= -->
+
+<div class="slide slide8">
+
+    <h1>
+        🎁 There's Something For You...
+    </h1>
+
+    <div class="gift" onclick="openGift()">
+        🎁
+    </div>
+
+    <div class="surprise" id="surprise">
+
+        ✨ SURPRISE! ✨
+
+        <br><br>
+
+       💖 I Love You So Much Hita...!💖
+
+        <br><br>
+
+        Stay Forever Mine...! 🫶
+
+    </div>
+
+    <button onclick="nextSlide()">
+        Final Surprise 🎉
+    </button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- SLIDE 9 -->
+<!-- ================================================= -->
+
+<div class="slide slide9">
+
+    <h1>
+        🎊 Let's Celebrate! 🎊
+    </h1>
+
+    <p>
+        3...
+    </p>
+
+    <p>
+        2...
+    </p>
+
+    <p>
+        1...
+    </p>
+
+    <p style="font-size:45px;">
+        🎉🎉🎉
+    </p>
+
+    <button onclick="nextSlide()">
+        Celebrate! 🎉
+    </button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- SLIDE 10 -->
+<!-- ================================================= -->
+
+<div class="slide slide10">
+
+    <div class="final">
+        🎂 HAPPY BIRTHDAY BACHHA! 🎂
+    </div>
+
+    <div class="finalMessage">
+
+        ❤️ Keep Smiling And Keep Shining ❤️
+
+        <br><br>
+
+        From your loved one 🫶
+
+        <br><br>
+
+        🎈 🎁 🎊 ✨ 💖 🎉
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* ================= SLIDE SYSTEM ================= */
+
+let currentSlide = 0;
+
+const slides = document.querySelectorAll(".slide");
+
+function nextSlide(){
+
+    slides[currentSlide].classList.remove("active");
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+        currentSlide = 0;
+    }
+
+    slides[currentSlide].classList.add("active");
+
+}
+
+
+/* ================= CANDLE ================= */
+
+function blow(candle){
+
+    candle.innerHTML = "💨";
+
+    createConfetti();
+
+}
+
+
+/* ================= GIFT ================= */
+
+function openGift(){
+
+    document.getElementById("surprise").style.display = "block";
+
+    createConfetti();
+
+}
+
+
+/* ================= FALLING HEARTS ================= */
+
+function createHeart(){
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.innerHTML =
+        ["❤️","💖","💕","💗","💓","✨"][Math.floor(Math.random()*6)];
+
+    heart.style.left =
+        Math.random()*100 + "vw";
+
+    heart.style.animationDuration =
+        (3 + Math.random()*4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(function(){
+
+        heart.remove();
+
+    },7000);
+
+}
+
+setInterval(createHeart,500);
+
+
+/* ================= CONFETTI ================= */
+
+function createConfetti(){
+
+    for(let i=0;i<50;i++){
+
+        const confetti = document.createElement("div");
+
+        confetti.innerHTML =
+            ["🎉","✨","🎊","💖","⭐"][Math.floor(Math.random()*5)];
+
+        confetti.style.position="fixed";
+
+        confetti.style.left =
+            Math.random()*100 + "vw";
+
+        confetti.style.top =
+            Math.random()*50 + "vh";
+
+        confetti.style.fontSize =
+            (15+Math.random()*30) + "px";
+
+        confetti.style.zIndex="9999";
+
+        document.body.appendChild(confetti);
+
+        confetti.animate(
+            [
+                {
+                    transform:"translateY(0) rotate(0deg)",
+                    opacity:1
+                },
+
+                {
+                    transform:
+                    "translateY(100vh) rotate(360deg)",
+                    opacity:0
+                }
+            ],
+            {
+                duration:
+                2000+Math.random()*2000
+            }
+        );
+
+        setTimeout(function(){
+
+            confetti.remove();
+
+        },4000);
+
+    }
+
+}
+
+
+/* ================= START CONFETTI ================= */
+
+setTimeout(function(){
+
+    createConfetti();
+
+},1000);
+
+</script>
+
+</body>
+</html>
