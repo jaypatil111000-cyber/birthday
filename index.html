@@ -477,6 +477,26 @@ button:hover{
 
 
 <body>
+    <audio id="birthdayMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicButton" onclick="toggleMusic()"
+        style="
+        position:fixed;
+        top:20px;
+        right:20px;
+        z-index:9999;
+        bottom:auto;
+        padding:10px 18px;
+        border:none;
+        border-radius:25px;
+        background:white;
+        color:#ff4081;
+        font-weight:bold;
+        cursor:pointer;">
+    🎵 Play Music
+</button>
 
 
 <!-- ================================================= -->
@@ -788,6 +808,19 @@ button:hover{
 
 
 <script>
+    const music = document.getElementById("birthdayMusic");
+const musicButton = document.getElementById("musicButton");
+
+function toggleMusic() {
+
+    if (music.paused) {
+        music.play();
+        musicButton.innerHTML = "🔊 Music On";
+    } else {
+        music.pause();
+        musicButton.innerHTML = "🔇 Music Off";
+    }
+}
 
 /* ================= SLIDE SYSTEM ================= */
 
